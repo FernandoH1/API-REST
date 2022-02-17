@@ -31,6 +31,14 @@ public class UsuarioService {
         return usuarioRepository.findByPrioridad(prioridad);
     }
 
+    public ArrayList<UsuarioModel>  obtenerPorNombre(String nombre) {
+        return usuarioRepository.findByNombre(nombre);
+    }
+
+    public ArrayList<UsuarioModel>  obtenerPorEmail(String email) {
+        return usuarioRepository.findByEmail(email);
+    }
+
     public boolean eliminarUsuario(Long id) {
         try{
             usuarioRepository.deleteById(id);

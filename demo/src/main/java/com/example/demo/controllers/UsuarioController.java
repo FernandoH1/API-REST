@@ -46,4 +46,16 @@ public class UsuarioController {
         }
     }
 
+    //Obtener un usuario por el Nombre
+    @GetMapping("/query/nombre")
+    public ArrayList<UsuarioModel> obtenerUsuarioPorNombre(@RequestParam("nombre") String nombre){
+        return this.usuarioService.obtenerPorNombre(nombre);
+    }
+
+    //Obtener un usuario por el Email
+    @GetMapping("/query/email")
+    public ArrayList<UsuarioModel> obtenerUsuarioPorEmail(@RequestParam("email") String email){
+        return this.usuarioService.obtenerPorEmail(email);
+    }
+
 }
