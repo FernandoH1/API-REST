@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.example.demo.models.UsuarioModel;
 import com.example.demo.servicios.UsuarioService;
 
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,16 @@ public class UsuarioController {
     @PostMapping()
     public UsuarioModel guardarUsuario(@RequestBody UsuarioModel usuario){
         return this.usuarioService.guardarUsuario(usuario);
+    }
+
+    @PutMapping()
+    public String guardarUsuarioPut(@RequestBody UsuarioModel usuario){
+        if(this.obtenerUsuarioPorId(usuario.getId())!=null){
+            return"Dato modificado";
+        }else{
+            return "No se encontro";
+        }
+
     }
 
     @GetMapping( path = "/{id}")

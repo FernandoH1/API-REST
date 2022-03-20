@@ -1,6 +1,7 @@
 package com.example.demo.models;
 
 import javax.persistence.*;
+import java.util.Optional;
 
 @Entity
 @Table(name = "usuario")
@@ -14,6 +15,19 @@ public class UsuarioModel {
     private String nombre;
     private String email;
     private Integer prioridad;
+
+    public UsuarioModel(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public UsuarioModel() {}
+
+    public UsuarioModel(Long id, String nombre, String email, Integer prioridad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.prioridad = prioridad;
+    }
 
     public void setPrioridad(Integer prioridad){
         this.prioridad = prioridad;

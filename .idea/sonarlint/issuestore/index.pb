@@ -7,3 +7,7 @@ m
 =demo/src/test/java/com/example/demo/DemoApplicationTests.java,a\6\a6850b6808e4fe1d7176852192046945dc099721
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+<
+demo/pom.xml,f\1\f1bf400bc0784549511ea07030d3a798eb8c0511
+w
+Gdemo/src/main/java/com/example/demo/repositorios/UsuarioRepository.java,1\6\167fe196cb779fcf5384a166404738b1da344c57

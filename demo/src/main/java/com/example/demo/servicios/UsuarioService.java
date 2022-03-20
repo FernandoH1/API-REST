@@ -22,10 +22,13 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
+    public UsuarioModel modificarUsuario(UsuarioModel usuario){
+        return usuarioRepository.save(usuario);
+    }
+
     public Optional<UsuarioModel> obtenerPorId(Long id){
         return usuarioRepository.findById(id);
     }
-
 
     public ArrayList<UsuarioModel>  obtenerPorPrioridad(Integer prioridad) {
         return usuarioRepository.findByPrioridad(prioridad);
